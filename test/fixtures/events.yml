@@ -1,0 +1,11 @@
+one:
+  name: "Ruby School"
+  start_date: <%= DateTime.now %>
+  end_date: <%= 6.weeks.from_now %>
+  max_students: 20
+
+two:
+  name: "Tomorrowland"
+  start_date: <%= DateTime.now %>
+  end_date: <%= 3.weeks.from_now %>
+  max_students: 40
