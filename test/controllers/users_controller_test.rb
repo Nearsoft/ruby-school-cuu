@@ -16,6 +16,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
+    @user.destroy
     assert_difference('User.count') do
       post users_url, params: { user: { date_of_birth: @user.date_of_birth, email: @user.email, first_name: @user.first_name, last_name: @user.last_name } }
     end
