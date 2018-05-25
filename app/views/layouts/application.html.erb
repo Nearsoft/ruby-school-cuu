@@ -14,6 +14,9 @@
         <%= value %> 
       </div>
     <% end %>
+
+    <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete if user_signed_in? %>
+
     <%= yield %>
   </body>
 </html>
