@@ -19,12 +19,12 @@ module Meeho
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings   = {
-        address:              'smtp.gmail.com',
-        port:                 587,
-        domain:               'gmail.com',
-        user_name:            'no.reply.meeho',
-        password:             'gusanovaleverga',
-        authentication:       'plain',
+        address:              ENV['EMAIL_ADDRESS'],
+        port:                 ENV['EMAIL_PORT'],
+        domain:               ENV['EMAIL_DOMAIN'],
+        user_name:            ENV['EMAIL_USER_NAME'],
+        password:             ENV['EMAIL_PASSWORD'],
+        authentication:       ENV['EMAIL_AUTHENTICATION'],
         enable_starttls_auto: true 
       }
   end
